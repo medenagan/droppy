@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>GoodSearch</title>
+    <meta name="description" content="GoodSearch Side Popup">
+    <meta name="author" content="Fabio Mereu">
+    <link rel="stylesheet" href="../style/side.css">
+</head>
+
+<body>
+    <header>
+        <img src="../assets/icons/icon-white.png">
+        <h1>
+            <a href="https://github.com/medenagan/good-search" target="_blank">Good Search</a>
+        </h1>
+    </header>
+    <section id="inside">
+        <form>
+            <fieldset>
+                <label>
+                    <span>Display</span>
+                    <input type="checkbox" name="useDisplay">
+                </label>
+
+                <label>
+                    <span>Filter</span>
+                    <input type="checkbox" name="useFilter">
+                </label>
+
+                <fieldset name="filter">
+                    <label>
+                        <span>Available</span>
+                        <input type="checkbox" name="filterInstock">
+                    </label>
+
+                    <label>
+                        <span>Out of Stock</span>
+                        <input type="checkbox" name="filterOutofstock">
+                    </label>
+
+                    <label>
+                        <span>Keyword</span>
+                        <input type="text" name="filterKeyword" placeholder="Any item keyword">
+                    </label>
+
+                    <fieldset>
+                        <label>
+                            <span>Mark</span>
+                            <input type="radio" name="filterHow" value="soft">
+                        </label>
+
+                        <label>
+                            <span>Hide</span>
+                            <input type="radio" name="filterHow" value="hard">
+                        </label>
+
+                    </fieldset>
+                </fieldset>
+            </fieldset>
+        </form>
+
+        <summary>
+            <div title="Matching">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-funnel" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd"
+                        d="M1.5 1.5A.5.5 0 0 1 2 1h12a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-.128.334L10 8.692V13.5a.5.5 0 0 1-.342.474l-3 1A.5.5 0 0 1 6 14.5V8.692L1.628 3.834A.5.5 0 0 1 1.5 3.5v-2zm1 .5v1.308l4.372 4.858A.5.5 0 0 1 7 8.5v5.306l2-.666V8.5a.5.5 0 0 1 .128-.334L13.5 3.308V2h-11z" />
+                </svg>
+                <span id="filteredCount"></span>
+            </div>
+
+            <div title="Filtered Out">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-eye-slash" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M13.359 11.238C15.06 9.72 16 8 16 8s-3-5.5-8-5.5a7.028 7.028 0 0 0-2.79.588l.77.771A5.944 5.944 0 0 1 8 3.5c2.12 0 3.879 1.168 5.168 2.457A13.134 13.134 0 0 1 14.828 8c-.058.087-.122.183-.195.288-.335.48-.83 1.12-1.465 1.755-.165.165-.337.328-.517.486l.708.709z" />
+                    <path
+                        d="M11.297 9.176a3.5 3.5 0 0 0-4.474-4.474l.823.823a2.5 2.5 0 0 1 2.829 2.829l.822.822zm-2.943 1.299l.822.822a3.5 3.5 0 0 1-4.474-4.474l.823.823a2.5 2.5 0 0 0 2.829 2.829z" />
+                    <path
+                        d="M3.35 5.47c-.18.16-.353.322-.518.487A13.134 13.134 0 0 0 1.172 8l.195.288c.335.48.83 1.12 1.465 1.755C4.121 11.332 5.881 12.5 8 12.5c.716 0 1.39-.133 2.02-.36l.77.772A7.029 7.029 0 0 1 8 13.5C3 13.5 0 8 0 8s.939-1.721 2.641-3.238l.708.709z" />
+                    <path fill-rule="evenodd" d="M13.646 14.354l-12-12 .708-.708 12 12-.708.708z" />
+                </svg>
+                <span id="filteredOutCount">
+            </div>
+
+            <div title="All Items">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-upc" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
+                </svg>
+                <span id="count"></span>
+            </div>
+        </summary>
+
+    </section>
+    <section id="outside">
+        <p>Sorry, <span>this website</span> is not supported.</p>
+    </section>
+    <footer>
+        <img src="../assets/merchants/banggood.png">
+    </footer>
+    <script src="../background/side.js"></script>
+</body>
+
+</html>
